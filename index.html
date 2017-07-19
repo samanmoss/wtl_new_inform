@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">    
   </head>
-  <body>
+  <body id="bodyy">
       <div class="container-fluid ">
             <div id="screen_area" class="row mx-auto" >
-                  <div id="logodiv" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 " >
- 
-                  </div>
-
-                  <div id="vid_col" class="col-xs-10 col-sm-10 col-md-10 col-lg-10" >
-                        <iframe  id="video" src="https://www.youtube.com/embed/sE0lhyDMIhI?autoplay=1&loop=1&playlist=sE0lhyDMIhI" frameborder="0" allowfullscreen ></iframe>  
-                  </div>
-                  <div id="logodiv" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 " >
-      
-                  </div>                  
+            <div id="frame">
+                  
+                
+                  <div id="vid_col" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                    
+                          <iframe  id="video" src="https://www.youtube.com/embed/sE0lhyDMIhI?autoplay=1&loop=1&playlist=sE0lhyDMIhI" frameborder="0" allowfullscreen ></iframe>
+                    </div>        
+                  
+          </div>                         
             </div> 
       </div>
               <div  id="marquee_row">
@@ -55,11 +54,14 @@
 
           var text_marquee = document.getElementById("text_marquee");
           var video=document.getElementById("video");
+          var screen=document.getElementById("frame");
           var marquee = document.getElementById("marquee_row");
-          var vid_aspect=0.51,font_aspect=0.045;
+
+          var vid_aspect=0.51,font_aspect=0.08;
           var time_marquee = text_marquee.innerHTML.length*0.23;
           video.style.height=(video.offsetWidth*vid_aspect)+'px';
-          marquee.style.fontSize=(width*font_aspect)+'px';
+          screen.style.height=(screen.offsetWidth*vid_aspect)+'px';
+          marquee.style.fontSize=(width*font_aspect*0.5625)+'px';
           text_marquee.style.animation='marquee '+time_marquee+'s linear infinite' ;
         };
     </script>
