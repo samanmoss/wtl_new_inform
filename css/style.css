@@ -43,7 +43,7 @@ body {
 }
 
 #screen_area{
-  margin-top: 3%;
+  margin-top: 1%;
 }
 
 p {
@@ -63,7 +63,7 @@ p {
 }
 
 #marquee_row{
-	/*margin-top:6%;*/
+	margin-top:1%;
 }
 
 .marquee {
